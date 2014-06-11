@@ -8,13 +8,15 @@ Declare 5 different variables and have them write to the console
 Declare 3 different variables who have a value type of a string and use the following on them:
 .split()
 .concat()
-.join()
 .length
+
 Declare an array with at least 10 elements and use the following on them:
+.join()
 .push()
 .pop()
 .reverse()
 .splice()
+
 Declare a function that does ALL of the above and call it in your file
 
 Lastly, (and most importantly) with each statement that you write, make sure you put a comment above it saying what you are doing in your own words. Get used to commenting your code so others know what you are doing.
