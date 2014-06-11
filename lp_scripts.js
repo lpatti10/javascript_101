@@ -1,6 +1,5 @@
 
 var listhomework = function () {
-console.log([, 
 
 
 /*Declaring 5 variables with various value types*/
@@ -60,19 +59,4 @@ mix.reverse();
 mix.splice(5, 1, "box");
 
 
-])};
-
-/*
-
-
-
-
-Declare a function that does ALL of the above and call it in your file
-
-
-
-
-
-
-
-*/
+};
