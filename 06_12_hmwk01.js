@@ -1071,7 +1071,7 @@ items.reduce(function(a, b, c, d) {
 
 01a | First I tried this:
       console.log(items[10]);
-  ...and got this:
+  (FAIL)...and got this: 
       Object {listing_id: 189187176, state: "active", user_id: 11250425, category_id: 69169841, title: "1970s Schlitz Malt Liquor Glass Beer Pitcher"…}
       VM177:2
       undefined
@@ -1081,7 +1081,7 @@ items.reduce(function(a, b, c, d) {
       items.map(function(a,b){
       return a.price;
       });
-  ...and got this:
+  (PASS)...and got this: 
       [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
   (!)TAKEAWAY: this returned all the prices!
 
@@ -1092,7 +1092,7 @@ items.reduce(function(a, b, c, d) {
       n += i;
       console.log(n);
       }
-  ...and got this: (FAIL)
+  (FAIL)...and got this: 
       (incremental values of 0 - 300 as 25 sepearte returns)
   (!)TAKEAWAY: returns not specific to price values in array.
 
@@ -1104,7 +1104,7 @@ items.reduce(function(a, b, c, d) {
       total += pricePull[i];
       console.log(total)
        }
-  ...and got this: (PASS)
+  (PASS)...and got this: 
       590.65
 
 01e | Now I need to divide total by length of the array
@@ -1115,7 +1115,7 @@ items.reduce(function(a, b, c, d) {
       console.log(total)
       console.log(total / pricePull.length);
       }
-  ...and got this: (SEMI-PASS)
+  (SEMI-PASS)...and got this: 
       (25 returns starting with 12 and ending with 23.625999999999998) 
 
 01f | I only want 1 return value so let's try it without ".length" extension
@@ -1123,11 +1123,24 @@ items.reduce(function(a, b, c, d) {
       var total = 0;
       for(var i in pricePull) { 
       total += pricePull[i];
-      console.log(total)
+      console.log(total);
       console.log(total / pricePull);
       }
-  ...and got this: (FAIL)
+  (FAIL)...and got this: 
       (25 returns starting with 12 and ending with 590.65 and NaN for every other return value)
+
+01g | Attempting to isolate last return of 23.625999999999998
+      console.log(total / pricePull.length);
+  (PASS)...and got this: 
+      23.625999999999998
+  (!)TAKEAWAY: working when taken out of supporting function...hmm
+
+01h | How can I chop off the last integers to return only 23.62? Let's see if Math.round works for this...
+      Math.round(23.625999999999998);
+  (FAIL)...and got this: 
+      24
+
+01i | Tim says to try other Math.functions to achieve this since Math.round will always round up to 23.63!      
 
 
 
