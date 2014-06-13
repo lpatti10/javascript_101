@@ -19,7 +19,14 @@
  
  
 // Here's the data!
-var items = [{
+
+/*MDN Example .map()
+var numbers = [1, 4, 9];
+var roots = numbers.map(Math.sqrt);
+*/
+
+
+var items = [{ //#1
   "listing_id": 161489961,
   "state": "active",
   "user_id": 7492310,
@@ -60,7 +67,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#2
   "listing_id": 129335930,
   "state": "active",
   "user_id": 11356846,
@@ -101,7 +108,7 @@ var items = [{
   "language": "en-US",
   "has_variations": true,
   "used_manufacturer": false
-}, {
+}, { //#3
   "listing_id": 187449201,
   "state": "active",
   "user_id": 8145825,
@@ -142,7 +149,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#4
   "listing_id": 184189258,
   "state": "active",
   "user_id": 22149893,
@@ -183,7 +190,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#5
   "listing_id": 181257720,
   "state": "active",
   "user_id": 15359177,
@@ -224,7 +231,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#6
   "listing_id": 175093824,
   "state": "active",
   "user_id": 7000828,
@@ -265,7 +272,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#7
   "listing_id": 165402468,
   "state": "active",
   "user_id": 22866488,
@@ -306,7 +313,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#8
   "listing_id": 189187392,
   "state": "active",
   "user_id": 11250425,
@@ -347,7 +354,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#9
   "listing_id": 187538351,
   "state": "active",
   "user_id": 10423317,
@@ -388,7 +395,7 @@ var items = [{
   "language": "en-US",
   "has_variations": true,
   "used_manufacturer": false
-}, {
+}, { //#10
   "listing_id": 167162318,
   "state": "active",
   "user_id": 24402677,
@@ -429,7 +436,7 @@ var items = [{
   "language": "en-US",
   "has_variations": true,
   "used_manufacturer": false
-}, {
+}, { //#11
   "listing_id": 189187176,
   "state": "active",
   "user_id": 11250425,
@@ -470,7 +477,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#12
   "listing_id": 189187060,
   "state": "active",
   "user_id": 46133579,
@@ -511,7 +518,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#13
   "listing_id": 168143227,
   "state": "active",
   "user_id": 11832009,
@@ -552,7 +559,7 @@ var items = [{
   "language": "en-US",
   "has_variations": true,
   "used_manufacturer": false
-}, {
+}, { //#14
   "listing_id": 188844105,
   "state": "active",
   "user_id": 11832009,
@@ -593,7 +600,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#15
   "listing_id": 167112986,
   "state": "active",
   "user_id": 11832009,
@@ -634,7 +641,7 @@ var items = [{
   "language": "en-US",
   "has_variations": true,
   "used_manufacturer": false
-}, {
+}, { //#16
   "listing_id": 173774044,
   "state": "active",
   "user_id": 19115459,
@@ -675,7 +682,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#17
   "listing_id": 187612531,
   "state": "active",
   "user_id": 37370641,
@@ -716,7 +723,7 @@ var items = [{
   "language": "en-US",
   "has_variations": true,
   "used_manufacturer": false
-}, {
+}, { //#18
   "listing_id": 118426185,
   "state": "active",
   "user_id": 20513122,
@@ -757,7 +764,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#19
   "listing_id": 189186674,
   "state": "active",
   "user_id": 24195467,
@@ -798,7 +805,7 @@ var items = [{
   "language": "en-US",
   "has_variations": true,
   "used_manufacturer": false
-}, {
+}, { //#20
   "listing_id": 184857757,
   "state": "active",
   "user_id": 31920628,
@@ -839,7 +846,7 @@ var items = [{
   "language": "en-US",
   "has_variations": true,
   "used_manufacturer": false
-}, {
+}, { //#21
   "listing_id": 107352718,
   "state": "active",
   "user_id": 22822975,
@@ -880,7 +887,7 @@ var items = [{
   "language": "en-US",
   "has_variations": true,
   "used_manufacturer": false
-}, {
+}, { //#22
   "listing_id": 189191047,
   "state": "active",
   "user_id": 11250425,
@@ -921,7 +928,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#23
   "listing_id": 189186476,
   "state": "active",
   "user_id": 46133579,
@@ -962,7 +969,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#24
   "listing_id": 189190869,
   "state": "active",
   "user_id": 46133579,
@@ -1003,7 +1010,7 @@ var items = [{
   "language": "en-US",
   "has_variations": false,
   "used_manufacturer": false
-}, {
+}, { //#25
   "listing_id": 91947693,
   "state": "active",
   "user_id": 5217261,
@@ -1045,3 +1052,55 @@ var items = [{
   "has_variations": false,
   "used_manufacturer": false
 }]
+
+
+
+items.map(function(a,b){
+  return a.price;
+});
+
+items.reduce(function(a, b, c, d) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+  console.log(d);
+}
+
+/*
+var counter = 0
+var prices = items.map() {
+  price.
+  return items[10]
+
+console.log(items[10]);
+
+}
+
+01 | First I tried this:
+      console.log(items[10]);
+  ...and got this:
+      Object {listing_id: 189187176, state: "active", user_id: 11250425, category_id: 69169841, title: "1970s Schlitz Malt Liquor Glass Beer Pitcher"…}
+      VM177:2
+      undefined
+  (!)TAKEAWAY: this targeted the 11th item in the array, not the 11th index in an object of the array.
+
+02 | Next tried:
+      items.map(function(a,b){
+      return a.price;
+      });
+  ...and got this:
+      [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
+  (!)TAKEAWAY: this returned all the prices!
+
+03 | Now I need to add this array together.
+
+
+
+
+
+
+
+
+
+*/
+
