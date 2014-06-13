@@ -31,6 +31,11 @@
       true
       14 false  
 
+02d | var currencyPull = ["USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "GBP", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD"]
+      currencyPull.forEach(function (item) {
+      console.log(item === "GBP");
+      });
+
 
 
 
