@@ -1,6 +1,30 @@
 /*
 
 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+var total = [0, 1, 2, 3].reduce(function(a, b) {
+    return a + b;
+});
+ 
+// 6
+ 
+var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
+    return a.concat(b);
+});
+ 
+// [0, 1, 2, 3, 4, 5]
+
+_______________________________________________________________________________________________________
 01a | First I tried this:
       console.log(items[10]);
   (FAIL)...and got this: 
@@ -37,6 +61,14 @@
       console.log(total)
        }
   (PASS)...and got this: 
+      590.65
+
+-or-| Let's try a reduce() here with renamed variable instead of a for()
+      var priceTotal = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5].reduce(function(a, b) {
+      return a + b;
+      });
+      console.log(priceTotal);
+ (PASS)...and got this: 
       590.65
 
 01e | Now I need to divide total by length of the array
