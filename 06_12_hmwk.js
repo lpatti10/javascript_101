@@ -1067,16 +1067,9 @@ items.reduce(function(a, b, c, d) {
 }
 
 /*
-var counter = 0
-var prices = items.map() {
-  price.
-  return items[10]
 
-console.log(items[10]);
 
-}
-
-01 | First I tried this:
+01a | First I tried this:
       console.log(items[10]);
   ...and got this:
       Object {listing_id: 189187176, state: "active", user_id: 11250425, category_id: 69169841, title: "1970s Schlitz Malt Liquor Glass Beer Pitcher"…}
@@ -1084,7 +1077,7 @@ console.log(items[10]);
       undefined
   (!)TAKEAWAY: this targeted the 11th item in the array, not the 11th index in an object of the array.
 
-02 | Next tried:
+01b | Next tried:
       items.map(function(a,b){
       return a.price;
       });
@@ -1092,8 +1085,49 @@ console.log(items[10]);
       [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
   (!)TAKEAWAY: this returned all the prices!
 
-03 | Now I need to add this array together.
+01c | Now I need to add this array together.
+      var pricePull = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
+      var n = 0;
+      for (var i = 0; i < pricePull.length; i++) {
+      n += i;
+      console.log(n);
+      }
+  ...and got this: (FAIL)
+      (incremental values of 0 - 300 as 25 sepearte returns)
+  (!)TAKEAWAY: returns not specific to price values in array.
 
+
+01d | Manually redefining returned array as new variable and using a for/in method to find sum of all parts
+      var pricePull = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
+      var total = 0;
+      for(var i in pricePull) { 
+      total += pricePull[i];
+      console.log(total)
+       }
+  ...and got this: (PASS)
+      590.65
+
+01e | Now I need to divide total by length of the array
+      var pricePull = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
+      var total = 0;
+      for(var i in pricePull) { 
+      total += pricePull[i];
+      console.log(total)
+      console.log(total / pricePull.length);
+      }
+  ...and got this: (SEMI-PASS)
+      (25 returns starting with 12 and ending with 23.625999999999998) 
+
+01f | I only want 1 return value so let's try it without ".length" extension
+      var pricePull = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
+      var total = 0;
+      for(var i in pricePull) { 
+      total += pricePull[i];
+      console.log(total)
+      console.log(total / pricePull);
+      }
+  ...and got this: (FAIL)
+      (25 returns starting with 12 and ending with 590.65 and NaN for every other return value)
 
 
 
