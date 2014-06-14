@@ -2,11 +2,12 @@ items.map(function(a,b){
       return a.currency_code;
       });
 
-var currencyPull = ["USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "GBP", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD"]
+items.map(function(a,b){
+      return a.currency_code === "GBP";
+      console.log(a.title + a.price);
+      });
 
-currencyPull.reduce(function(a, b) {
-    return a === "GBP";
-});
+
 /*
 
 02a | Need to scan array for "GBP" match in currency_code:
@@ -58,7 +59,11 @@ currencyPull.reduce(function(a, b) {
   (FAIL)...and got this:
       [false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
 
-
+02f | Trying reduce() method to isolate 
+      var currencyPull = ["USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "GBP", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD", "USD"]
+      currencyPull.reduce(function(a, b) {
+      return a === "GBP";
+      });
 
    
 

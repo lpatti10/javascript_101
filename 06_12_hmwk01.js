@@ -1,32 +1,22 @@
-items.map(function(a,b){
+var pricePull = items.map(function(a,b){
       return a.price;
       });
 
-/* Not sure how to connect these two without manually redefining returned array */
-/*
-var pricePull = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
-      var total = 0;
-      for(var i in pricePull) { 
-      total += pricePull[i];
-      }
-
-console.log(total)
-
-console.log(total / pricePull.length);
-*/
-
-/* Replace for/in method above with reduce() method */
-
-var pricePull = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
-
-pricePull.reduce(function(a, b) {
+var total = pricePull.reduce(function(a, b) {
     return a + b;
 });
 
-/* Not sure how to connect these two without manually redefining and rounding returned average */
+/*console.log(total / pricePull.length);*/
+
+console.log("The average price is $" + Math.trunc(total / pricePull.length));
+
+
+
+/*
+
 
 var avg = 23.62
-      console.log("The average price is $" + avg);
+console.log("The average price is $" + avg);
 
 /*
 
@@ -59,7 +49,7 @@ ________________________________________________________________________________
   (!)TAKEAWAY: returns not specific to price values in array.
 
 
-01d | Manually redefining returned array as new variable and using a for/in method to find sum of all parts
+01d | Trying for/in and manually redefining returned array as new variable to find sum of all parts
       var pricePull = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
       var total = 0;
       for(var i in pricePull) { 
@@ -110,17 +100,23 @@ ________________________________________________________________________________
   (FAIL)...and got this: 
       24
 
-01i | Tim says to try other Math.functions to achieve this since Math.round will always round up.      
-
-
-01j | Final log with customized message
+01i | Final log with customized message
       var avg = 23.62
       console.log("The average price is $" + avg);
   (PASS)...and got this:
       The average price is $23.62 
 
+01j | Tim says to try other Math.functions to achieve this since Math.round will always round up.      
 
+01k | Tried using Math.floor() method 
+      console.log("The average price is $" + Math.floor(total / pricePull.length));
+  (FAIL)...and got this: 
+      The average price is $23 
 
+01l | Tried using Math.ceil() method 
+      console.log("The average price is $" + Math.ceil(total / pricePull.length));
+  (FAIL)...and got this: 
+      The average price is $24 
 
+01m | Tried using Math.trunc() method
 */
-
