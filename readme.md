@@ -6,7 +6,8 @@
  
 // 2. Show me how find the item with a "GBP" curreny code and print its name and price. Please console.log the one you find.
 // The output should be "1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18"
- 
+//...to console.log out the pound currency symbol, you need to use the unicode version of it which is \u00A3
+
  
 // 3. Show me how to find which items are made of wood. Please console.log the ones you find.
 // The output should be:
