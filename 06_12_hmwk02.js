@@ -1,11 +1,8 @@
-items.map(function(a,b){
-      return a.currency_code;
-      });
-
-items.map(function(a,b){
-      return a.currency_code === "GBP";
-      console.log(a.title + a.price);
-      });
+var ccodePull = items.map(function(a,b){
+      if(a.currency_code === "GBP") {
+      console.log(a.title + " costs \u00A3" + a.price);
+      }
+});
 
 
 /*
@@ -65,9 +62,13 @@ items.map(function(a,b){
       return a === "GBP";
       });
 
-   
-
-
+02g | 
+      items.map(function(a,b){
+      return a.currency_code === "GBP";
+      console.log(a.title + a.price);
+      });
+ (SEMI-PASS)...and got this:
+      [false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
 
 
 

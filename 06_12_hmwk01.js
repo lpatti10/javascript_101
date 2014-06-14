@@ -6,20 +6,9 @@ var total = pricePull.reduce(function(a, b) {
     return a + b;
 });
 
-/*console.log(total / pricePull.length);*/
-
-console.log("The average price is $" + Math.trunc(total / pricePull.length));
-
-
+console.log("The average price is $" + (total / pricePull.length));
 
 /*
-
-
-var avg = 23.62
-console.log("The average price is $" + avg);
-
-/*
-
 _______________________________________________________________________________________________________
 01a | First I tried this:
       console.log(items[10]);
