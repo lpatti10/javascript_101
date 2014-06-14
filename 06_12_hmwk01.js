@@ -1,28 +1,34 @@
+items.map(function(a,b){
+      return a.price;
+      });
+
+/* Not sure how to connect these two without manually redefining returned array */
 /*
+var pricePull = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
+      var total = 0;
+      for(var i in pricePull) { 
+      total += pricePull[i];
+      }
 
+console.log(total)
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-var total = [0, 1, 2, 3].reduce(function(a, b) {
+console.log(total / pricePull.length);
+*/
+
+/* Replace for/in method above with reduce() method */
+
+var pricePull = [12, 20, 50, 25, 41.95, 5.75, 32.99, 15, 28.95, 24.95, 18, 2.99, 38, 20, 28, 13.59, 17, 48, 15, 14, 80, 22, 6.99, 6.99, 3.5]
+
+pricePull.reduce(function(a, b) {
     return a + b;
 });
- 
-// 6
- 
-var flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
-    return a.concat(b);
-});
- 
-// [0, 1, 2, 3, 4, 5]
+
+/* Not sure how to connect these two without manually redefining and rounding returned average */
+
+var avg = 23.62
+      console.log("The average price is $" + avg);
+
+/*
 
 _______________________________________________________________________________________________________
 01a | First I tried this:
@@ -104,7 +110,7 @@ ________________________________________________________________________________
   (FAIL)...and got this: 
       24
 
-01i | Tim says to try other Math.functions to achieve this since Math.round will always round up to 23.63!      
+01i | Tim says to try other Math.functions to achieve this since Math.round will always round up.      
 
 
 01j | Final log with customized message
