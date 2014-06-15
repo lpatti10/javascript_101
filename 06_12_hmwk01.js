@@ -1,12 +1,17 @@
 var pricePull = items.map(function(a,b){
-      return a.price;
-      });
-
-var total = pricePull.reduce(function(a, b) {
-    return a + b;
+  return a.price;
 });
 
-console.log("The average price is $" + (total / pricePull.length));
+var total = pricePull.reduce(function(a, b){
+  return a + b;
+});
+
+/* toPrecision truncates to hundredth value, but still seems to round up...*/
+var average = (total / pricePull.length);
+console.log(total / pricePull.length);
+console.log("The average price is $" + average.toPrecision(4));
+
+
 
 /*
 _______________________________________________________________________________________________________

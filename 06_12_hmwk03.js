@@ -1,16 +1,55 @@
-
-      var materialsPull = items.map(function(a,b) {
+var materialsPull = items.map(function(a,b) {
         return a.materials; 
         console.log(a.materials);
       });
 
-      var woodScan = materialsPull.forEach(function(a,b,c){
-        for (var i in materialsPull) {
-          if(i == "wood");
-           console.log(c.title + " is made of wood.");
-        }
+      var woodScan = materialsPull.forEach(function(item){
+           console.log(item);
       });
 
+
+
+____________________________________________________
+
+var materialsPull = items.map(function(a,b,c) {
+  return c.materials; 
+});
+     
+console.log(materialsPull);
+
+
+  materialsPull[i] = true;
+  for(var i in materialsPull) {
+    return a.materials;
+  console.log(materialsPull[i]);
+  }
+____________________________________________________
+
+
+      var materialsPull = items.map(function(a,b) {
+        return a.materials; 
+        materialsPull.forEach(function(a){
+           if (a == "wood") {
+            console.log(a.title + " is made of wood.");
+          }
+        })
+      });
+
+____________________________________________________
+
+            var materialsPull = items.map(function(a,b) {
+        return a.materials; 
+        console.log(a.materials);
+      });
+
+      var woodScan = materialsPull.forEach(function(a,b) {
+        if (a == "wood") {
+          console.log(a.title + " is made of wood.");
+         }
+      });
+
+
+console.log(a.title + " is made of wood.");
 /*
 
 03a | Need to scan array for "wood" match in materials:
@@ -116,10 +155,58 @@
   (FAIL)...and got this:
       (625 returns undefined) is made of wood. 
 
+03h | Combined map() with forEach 
+      var materialsPull = items.map(function(a,b) {
+        return a.materials; 
+        console.log(a.materials);
+      });
 
+      var woodScan = materialsPull.forEach(function(item){
+           console.log(item);
+      });
+  (PASS)...and got this:
+      (same returns as 03b)
 
+03i | Added operator and param to try and target wood
+      var materialsPull = items.map(function(a,b) {
+        return a.materials; 
+        console.log(a.materials);
+      });
 
+      var woodScan = materialsPull.forEach(function(item){
+           console.log(item == "wood");
+      });
+  (FAIL)...and got this:
+      (25 false)
 
+03j | Added a,b params to forEach function to try and access item with array
+      var materialsPull = items.map(function(a,b) {
+        return a.materials; 
+        console.log(a.materials);
+      });
+
+      var woodScan = materialsPull.forEach(function(a,b) {
+           if (b == "wood");
+           console.log(a.title + " is made of wood.");
+      });
+  (FAIL)...and got this:
+      (25 undefined) is made of wood.
+
+03k | Ran a,b,c test to see what I need to access
+      var materialsPull = items.map(function(a,b) {
+        return a.materials; 
+        console.log(a.materials);
+      });
+      var woodScan = materialsPull.forEach(function(a,b,c){
+           console.log(a);
+           console.log(b);
+           console.log(c);
+      });
+  (PASS)...and got this:
+      ["glass", "wood", "metal"] 
+      0 
+      [Array[3], Array[7], Array[4], Array[2], Array[4], Array[4], Array[0], Array[1], Array[4], Array[7], Array[1], Array[3], Array[9], Array[5], Array[7], Array[0], Array[13], Array[3], Array[4], Array[1], Array[1], Array[1], Array[3], Array[3], Array[2]]
+  (!)TAKEAWAY: Don't need b or c
 
 
 ____________________________________________________

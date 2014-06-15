@@ -1,7 +1,7 @@
 var ccodePull = items.map(function(a,b){
-      if(a.currency_code === "GBP") {
-      console.log(a.title + " costs \u00A3" + a.price);
-      }
+  if(a.currency_code === "GBP") {
+  console.log(a.title + " costs \u00A3" + a.price);
+  }
 });
 
 
