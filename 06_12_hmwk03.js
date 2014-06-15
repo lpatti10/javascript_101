@@ -1,42 +1,62 @@
+/* I've been trying these variations for many hours with no luck getting past first pull of materials. */
+
+//This is successful at targeting and returning all materials arrays for each object/item.
 var materialsPull = items.map(function(a,b) {
   if(a.materials) {
   console.log(a.materials);
   }
 });
 
+//This seems like the closest I've gotten to combining into one function out of all attempts below...
+var materialsPull = items.map(function(a,b) {
+  return a.materials; 
+  materialsPull.forEach(function(a){
+    if (a == "wood") {
+    console.log(a.title + " is made of wood.");
+    }
+  })
+});
+
+//
+var materialsPull = items.map(function(a,b) {
+  if(a.materials) {
+  console.log(a.materials);
+  }
+});
 
 materialsPull.forEach(function(a){
   if(a == "wood") {
   console.log(a);
   }
 });
-____________________________________________________
+
+//
 var materialsPull = items.forEach(function(a,b) {
-        return b.materials;
-        console.log(b.materials);
-        if (b.materials == "wood") {
-            console.log(a.title + " is made of wood.");
-        }
-    })
+  return b.materials;
+  console.log(b.materials);
+  if (b.materials == "wood") {
+        console.log(a.title + " is made of wood.");
+  }
 });
 
+//
+var materialsPull = items.map(function(a,b) {
+  return a.materials; 
+  console.log(a.materials);
+});
 
-____________________________________________________
- var materialsPull = items.map(function(a,b) {
-        return a.materials; 
-        console.log(a.materials);
-      });
-      for (var i in items) {
-            console.log(a.title + " is made of wood.");
-      };
+for (var i in items) {
+  console.log(a.title + " is made of wood.");
+};
 
-____________________________________________________
+//
 var materialsPull = items.map(function(a,b) {
   if(a.materials) {
   console.log(a.materials);
   }
 });
 
+//
 var materialsPull = items.map(function(a,b) {
   return a.materials; 
   if(a.materials == "wood") {
@@ -44,58 +64,40 @@ var materialsPull = items.map(function(a,b) {
   }
 });
 
-
-____________________________________________________
-
+//
 var materialsPull = items.map(function(a,b) {
-        return a.materials; 
-        console.log(a.materials);
+  return a.materials; 
+  console.log(a.materials);
 });
 
 var woodScan = materialsPull.forEach(function(item){
-           console.log(item);
+  console.log(item);
 });
 
-
-
-____________________________________________________
-
+//
 var materialsPull = items.map(function(a,b,c) {
   return c.materials; 
 });
      
 console.log(materialsPull);
 
-
-  materialsPull[i] = true;
+materialsPull[i] = true;
   for(var i in materialsPull) {
     return a.materials;
-  console.log(materialsPull[i]);
+    console.log(materialsPull[i]);
+  };
+
+//
+var materialsPull = items.map(function(a,b) {
+  return a.materials; 
+  console.log(a.materials);
+});
+
+var woodScan = materialsPull.forEach(function(a,b) {
+  if (b == "wood") {
+    console.log(a.title + " is made of wood.");
   }
-____________________________________________________
-
-
-      var materialsPull = items.map(function(a,b) {
-        return a.materials; 
-        materialsPull.forEach(function(a){
-           if (a == "wood") {
-            console.log(a.title + " is made of wood.");
-          }
-        })
-      });
-
-____________________________________________________
-
-            var materialsPull = items.map(function(a,b) {
-        return a.materials; 
-        console.log(a.materials);
-      });
-
-      var woodScan = materialsPull.forEach(function(a,b) {
-        if (b == "wood") {
-          console.log(a.title + " is made of wood.");
-         }
-      });
+});
 
 
 /*
@@ -257,56 +259,8 @@ ____________________________________________________
   (!)TAKEAWAY: Don't need b or c
 
 
-____________________________________________________
 
-var materialsPull = items.map(function(a,b) {
-      return a.materials; 
-      console.log(a.materials);
-
-for (var i in materialsPull) {
-    if(materialsPull == "wood"){
-    console.log(a.title + " is made of wood.");
-    }
-  }
-
-
-var materialsPull = items.map(function(a,b) {
-      return a.materials; 
-      console.log(a.title + " is made of wood.");
-});
-____________________________________________________
-
-var materialsPull = items.map(function(a,b) {
-  return a.materials;
-}
-  materialsPull.forEach(function(a){
-    if(a.materials == "wood"){
-    console.log(a.title + " is made of wood.");
-  
-  }
-}));
-
-      console.log(a.title + " is made of wood.");
 
 
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  */

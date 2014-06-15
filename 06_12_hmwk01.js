@@ -14,6 +14,16 @@ console.log("The average price is $" + average.toPrecision(4));
 
 
 /*
+var pricePull = items.map(function(a,b){
+      return a.price;
+      });
+
+var total = pricePull.reduce(function(a, b) {
+    return a + b;
+});
+
+console.log("The average price is $" + (total / pricePull.length));
+
 _______________________________________________________________________________________________________
 01a | First I tried this:
       console.log(items[10]);
