@@ -1,48 +1,15 @@
 
-var materialsPull = items.map(function(a,b) {
-      if(a.materials) {
-      console.log(a.materials);
-      }
-});
+      var materialsPull = items.map(function(a,b) {
+        return a.materials; 
+        console.log(a.materials);
+      });
 
-
-var materialsPull = items.forEach(function(a,b) {
-      if(a.materials) {
-      console.log(a.materials);
-      }
-});
-____________________________________________________
-
-var materialsPull = items.map(function(a,b) {
-      return a.materials; 
-     /* console.log(a.materials);*/
-});
-
-for (var i in materialsPull) {
-    if(materialsPull == "wood"){
-    console.log(a.title + " is made of wood.");
-    }
-  }
-
-
-var materialsPull = items.map(function(a,b) {
-      return a.materials; 
-      console.log(a.title + " is made of wood.");
-});
-
-____________________________________________________
-
-var materialsPull = items.map(function(a,b) {
-  return a.materials;
-}
-  materials.forEach(function(a){
-    if(a.materials == "wood"){
-    console.log(a.title + " is made of wood.");
-  
-  }
-}));
-
-      console.log(a.title + " is made of wood.");
+      var woodScan = materialsPull.forEach(function(a,b,c){
+        for (var i in materialsPull) {
+          if(i == "wood");
+           console.log(c.title + " is made of wood.");
+        }
+      });
 
 /*
 
@@ -119,6 +86,35 @@ var materialsPull = items.map(function(a,b) {
       (same returns as 03b)
 
 
+03f | Combined map() with forEach to attemp wood scan
+      var materialsPull = items.map(function(a,b) {
+        return a.materials; 
+        console.log(a.materials);
+      });
+
+      var woodScan = materialsPull.forEach(function(a,b){
+        for (var i in materialsPull) {
+          if(i == "wood");
+           console.log(a.title + " is made of wood.");
+        }
+      });
+  (FAIL)...and got this:
+      (625 returns undefined) is made of wood. 
+
+03g | Same as above, but added c to function to represent array being transversed
+      var materialsPull = items.map(function(a,b,c) {
+        return a.materials; 
+        console.log(a.materials);
+      });
+
+      var woodScan = materialsPull.forEach(function(a,b){
+        for (var i in materialsPull) {
+          if(i == "wood");
+           console.log(c.title + " is made of wood.");
+        }
+      });
+  (FAIL)...and got this:
+      (625 returns undefined) is made of wood. 
 
 
 
@@ -126,8 +122,40 @@ var materialsPull = items.map(function(a,b) {
 
 
 
+____________________________________________________
+
+var materialsPull = items.map(function(a,b) {
+      return a.materials; 
+      console.log(a.materials);
+
+for (var i in materialsPull) {
+    if(materialsPull == "wood"){
+    console.log(a.title + " is made of wood.");
+    }
+  }
 
 
+var materialsPull = items.map(function(a,b) {
+      return a.materials; 
+      console.log(a.title + " is made of wood.");
+});
+____________________________________________________
+
+var materialsPull = items.map(function(a,b) {
+  return a.materials;
+}
+  materialsPull.forEach(function(a){
+    if(a.materials == "wood"){
+    console.log(a.title + " is made of wood.");
+  
+  }
+}));
+
+      console.log(a.title + " is made of wood.");
+
+
+
+*/
 
 
 
