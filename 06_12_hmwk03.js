@@ -1,11 +1,60 @@
 var materialsPull = items.map(function(a,b) {
+  if(a.materials) {
+  console.log(a.materials);
+  }
+});
+
+
+materialsPull.forEach(function(a){
+  if(a == "wood") {
+  console.log(a);
+  }
+});
+____________________________________________________
+var materialsPull = items.forEach(function(a,b) {
+        return b.materials;
+        console.log(b.materials);
+        if (b.materials == "wood") {
+            console.log(a.title + " is made of wood.");
+        }
+    })
+});
+
+
+____________________________________________________
+ var materialsPull = items.map(function(a,b) {
         return a.materials; 
         console.log(a.materials);
       });
+      for (var i in items) {
+            console.log(a.title + " is made of wood.");
+      };
 
-      var woodScan = materialsPull.forEach(function(item){
+____________________________________________________
+var materialsPull = items.map(function(a,b) {
+  if(a.materials) {
+  console.log(a.materials);
+  }
+});
+
+var materialsPull = items.map(function(a,b) {
+  return a.materials; 
+  if(a.materials == "wood") {
+    console.log(a.title + " is made of wood.");
+  }
+});
+
+
+____________________________________________________
+
+var materialsPull = items.map(function(a,b) {
+        return a.materials; 
+        console.log(a.materials);
+});
+
+var woodScan = materialsPull.forEach(function(item){
            console.log(item);
-      });
+});
 
 
 
@@ -43,13 +92,12 @@ ____________________________________________________
       });
 
       var woodScan = materialsPull.forEach(function(a,b) {
-        if (a == "wood") {
+        if (b == "wood") {
           console.log(a.title + " is made of wood.");
          }
       });
 
 
-console.log(a.title + " is made of wood.");
 /*
 
 03a | Need to scan array for "wood" match in materials:
