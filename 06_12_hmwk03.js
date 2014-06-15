@@ -15,13 +15,20 @@ ____________________________________________________
 
 var materialsPull = items.map(function(a,b) {
       return a.materials; 
-      console.log(a.materials);
+     /* console.log(a.materials);*/
 });
 
+for (var i in materialsPull) {
+    if(materialsPull == "wood"){
+    console.log(a.title + " is made of wood.");
+    }
+  }
 
-      for (var i in materialsPull) {
-      console.log(materialsPull[i]);
-      }
+
+var materialsPull = items.map(function(a,b) {
+      return a.materials; 
+      console.log(a.title + " is made of wood.");
+});
 
 ____________________________________________________
 
@@ -121,16 +128,6 @@ var materialsPull = items.map(function(a,b) {
 
 
 
-
-items.forEach(function(a){
-  return a.materials;
-}
-  materials.forEach(function(a){
-    if(a.materials == "wood"){
-    console.log(a.title,"costs", '\u00A3', a.price);
-  
-  }
-}));
 
 
 
