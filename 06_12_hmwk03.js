@@ -1,13 +1,13 @@
-/* I've been trying these variations for many hours with no luck getting past first pull of materials. */
+/* I've been trying these variations all day with no luck getting past first pull of materials. */
 
-//This is successful at targeting and returning all materials arrays for each object/item.
+//This is successful at targeting and returning all "materials" arrays for each object/item.
 var materialsPull = items.map(function(a,b) {
   if(a.materials) {
   console.log(a.materials);
   }
 });
 
-//This seems like the closest I've gotten to combining into one function out of all attempts below...
+//This seems like the best of my explorations below, but doesn't work...
 var materialsPull = items.map(function(a,b) {
   return a.materials; 
   materialsPull.forEach(function(a){
@@ -17,87 +17,6 @@ var materialsPull = items.map(function(a,b) {
   })
 });
 
-//
-var materialsPull = items.map(function(a,b) {
-  if(a.materials) {
-  console.log(a.materials);
-  }
-});
-
-materialsPull.forEach(function(a){
-  if(a == "wood") {
-  console.log(a);
-  }
-});
-
-//
-var materialsPull = items.forEach(function(a,b) {
-  return b.materials;
-  console.log(b.materials);
-  if (b.materials == "wood") {
-        console.log(a.title + " is made of wood.");
-  }
-});
-
-//
-var materialsPull = items.map(function(a,b) {
-  return a.materials; 
-  console.log(a.materials);
-});
-
-for (var i in items) {
-  console.log(a.title + " is made of wood.");
-};
-
-//
-var materialsPull = items.map(function(a,b) {
-  if(a.materials) {
-  console.log(a.materials);
-  }
-});
-
-//
-var materialsPull = items.map(function(a,b) {
-  return a.materials; 
-  if(a.materials == "wood") {
-    console.log(a.title + " is made of wood.");
-  }
-});
-
-//
-var materialsPull = items.map(function(a,b) {
-  return a.materials; 
-  console.log(a.materials);
-});
-
-var woodScan = materialsPull.forEach(function(item){
-  console.log(item);
-});
-
-//
-var materialsPull = items.map(function(a,b,c) {
-  return c.materials; 
-});
-     
-console.log(materialsPull);
-
-materialsPull[i] = true;
-  for(var i in materialsPull) {
-    return a.materials;
-    console.log(materialsPull[i]);
-  };
-
-//
-var materialsPull = items.map(function(a,b) {
-  return a.materials; 
-  console.log(a.materials);
-});
-
-var woodScan = materialsPull.forEach(function(a,b) {
-  if (b == "wood") {
-    console.log(a.title + " is made of wood.");
-  }
-});
 
 
 /*
@@ -258,9 +177,81 @@ var woodScan = materialsPull.forEach(function(a,b) {
       [Array[3], Array[7], Array[4], Array[2], Array[4], Array[4], Array[0], Array[1], Array[4], Array[7], Array[1], Array[3], Array[9], Array[5], Array[7], Array[0], Array[13], Array[3], Array[4], Array[1], Array[1], Array[1], Array[3], Array[3], Array[2]]
   (!)TAKEAWAY: Don't need b or c
 
+03l | Trying to understand what a, b, and c represent on return...
+      items.forEach(function(a,b,c){
+        console.log(a.materials);
+        console.log(b.materials);
+        conlsole.log(c.materials);
+      });
+  (FAIL)...and got this:
+      ["glass", "wood", "metal"] 
+
+ADDITIONAL TRIES:
+ 
+//Skipping map() and trying forEach as starting point...
+items.forEach(function(a,b,c){
+  console.log(a.materials);
+  if (a.materials == "wood"]) {
+  console.log(a.title + " is made of wood.");
+});
+
+//map() and forEach with one param/arg.
+var materialsPull = items.map(function(a,b) {
+  if(a.materials) {
+  console.log(a.materials);
+  }
+});
+
+materialsPull.forEach(function(a){
+  if(a == "wood") {
+  console.log(a);
+  }
+});
+
+//forEach with 2 args: element value and element index
+var materialsPull = items.forEach(function(a,b) {
+  return a.materials;
+  console.log(a.materials);
+  if (b.materials == "wood") {
+    console.log(a.title + " is made of wood.");
+  }
+});
+
+//map() and for/in combination
+var materialsPull = items.map(function(a,b) {
+  return a.materials; 
+  console.log(a.materials);
+});
+
+for (var i in items) {
+  console.log(items [i === "wood"] a.title + " is made of wood.");
+};
 
 
+//map() containing if statement
+var materialsPull = items.map(function(a,b) {
+  return a.materials; 
+  if(a.materials == "wood") {
+    console.log(a.title + " is made of wood.");
+  }
+});
 
+//for/in as second function    
+  for(var i in materialsPull) {
+  return a.materials;
+  console.log(materialsPull[i]);
+};
 
+//map() against original array followed by forEach against returned
+var materialsPull = items.map(function(a,b) {
+  return a.materials; 
+  console.log(a.materials);
+});
+
+var woodScan = materialsPull.forEach(function(a,b) {
+  if (b == "wood") {
+    console.log(a.title + " is made of wood.");
+  }
+});
 
 */
